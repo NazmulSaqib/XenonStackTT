@@ -1,0 +1,21 @@
+{% extends 'myApp/home.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron container row">
+    <div class="col-md">
+        <h1>Submit your Query</h1>
+        <div class="card card-body">
+           <form action="" method="POST">
+              {% csrf_token %}
+                {{form.as_p}}
+                <br>
+             <input type="submit" name="Submit">
+             </form>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+ 
+{% endblock %}
